@@ -4,8 +4,8 @@ const { NativeEventEmitter, NativeModules } = ReactNative;
 
 const RNZipArchive = NativeModules.RNZipArchive;
 
-// const rnzaEmitter = new NativeEventEmitter(RNZipArchive);
-const rnzaEmitter = new NativeEventEmitter();
+const rnzaEmitter = new NativeEventEmitter(RNZipArchive);
+// const rnzaEmitter = new NativeEventEmitter();
 
 const normalizeFilePath = (path) =>
   path.startsWith("file://") ? path.slice(7) : path;
